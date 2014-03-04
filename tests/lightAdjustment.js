@@ -37,10 +37,26 @@ else
 	    if (err) throw err;
 	    config = JSON.parse(data);
 
-	    if(argv.r)
-	    	updateBrightnessFactor();
-	    else
-	    	adjustBrightness();
+	    fs.exists('./images',function(inExists)
+	    {
+	    	if(inExists)
+	    	{
+		    	if(argv.r)
+		    		updateBrightnessFactor();
+		    	else
+			    	adjustBrightness();
+	    	}
+	    	else
+	    	{
+	    		fs.mkdir('./images',function()
+	    		{
+			    	if(argv.r)
+			    		updateBrightnessFactor();
+			    	else
+				    	adjustBrightness();
+	    		});
+	    	}
+		});
 	});
 }
 
