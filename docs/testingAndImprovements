@@ -1,0 +1,22 @@
+testing:
+
+1. lighter [v]
+2. darker [v]
+3. shutting off/turning on [v]
+
+
+issues:
+[v, by syncing write, delete better] 0. Getting random exceptions from hummus jpg [now that i stopped deleting the images...see if this still happens]
+
+1. include a retry policy, on state request (especially), on changing lights etc...
+2. i'm getting sometimes waits...figure out why...if ok and expected (lost sudden contact with light), cool. if not...resolve
+3. make sure i don't get going up/down automatically due to high resolution
+4. make sure runs properly when other bulbs exist
+5. remove need for timeout when checking if lights off is good (right now have to turn off so picture is not taken too soon)
+6. theres a problem with images being deleted too early...
+7. sometimes stuck in waiting for bulb to clear, need to retry? or fail after timeout?
+8. worked between 12-6:20....and then died [and i don't even know why :(]
+
+features
+- [v] Continuous run [make sure to start counting only when done!]
+- I need a good method to turn off the lights if somebody opened them by mistake [if that's at all important]

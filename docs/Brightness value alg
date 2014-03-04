@@ -1,0 +1,35 @@
+the application will provide an option to choose
+	- bulb [if not chosen, will take the previous one defined].
+	- desired level of brightness by either providing one, or taking the current one.
+
+I want also to allow running either continously, adjusting the light every 2 mts, or stop immediately. so put it all in a nice function.
+
+and so the inputs are:
+	inputs:
+		- bulb name
+		- desired level of brightness
+
+
+now do this:
+	1. Open the thing, wait for right bulb to be detected. once done continue to 2 (callback)
+	2. Adjust the light:
+		2.1 Grab an image and determine brightness, then done go to 2.2 (callback)
+		2.2 If image brightness higher than desired for the given threshold, go darker a small step [see "going darker"], 
+				when ready and if not failed continue to 2.1 (callback). if failed go to 3
+		2.3 If image brightness lower than desired for the given threshold, go brighter a small step [see "going brighter"], 
+				when ready and if not failed continue to 2.1 (callback). if failed go to 3
+		2.4 otherwise go to 3
+	3. finish
+
+[going darker]
+	1. determine current value, when done go to (2)
+	2. if off or low enough, return failure (can't go darker)
+	3. otherwise go lower a step, where if low enough turn the light off, otherwise make sure it's on, when done call callback
+
+[goind brighter]
+	1. determine current value, when done go to (2)
+	2. if in max value and on, return failure (can't go lighter)
+	3. if was off, turn on, otherwise go higher a step. in any case, when done, call callback
+
+
+	NEED BETTER STOPPING CONDITION!!!!! so that i'm not dependent on threshold and stepssss

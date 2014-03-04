@@ -1,0 +1,17 @@
+{
+  "name": "lightAdjustment",
+  "version": "0.0.0",
+  "description": "tests i'm running for my lifx scripts",
+  "main": "basic.js",
+  "dependencies": {
+    "lifx": "~0.1.3",
+    "yargs": "^1.1.3",
+    "moment": "^2.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD"
+}

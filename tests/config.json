@@ -1,0 +1,9 @@
+{
+  "brightness": 206,
+  "bulb": "Entrance",
+  "cameraSnapshotURL": "http://guest:guest@10.0.0.174/snapshot.jpg",
+  "tolerance": 3,
+  "illuminationStepSize": 255,
+  "turnOffLevel": 511,
+  "interAjdustmentsWait": 120000
+}
