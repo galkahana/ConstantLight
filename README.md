@@ -11,3 +11,5 @@ then run it once with "node lightAdjustment"
 or run it continously with "node lightAdjustment -c".
 
 [more to follow...this is just something quick cause i don't want to lose the code]
+
+essay about this is [here](http://personal.pdfhummus.com/2014/03/automatic-lighting-adjustment-with-lifx.html)
